@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K'OD Marketing Agency - Digital Marketing & Fintech Solutions</title>
+</head>
+ <style>
+   /* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #ff8c00, #ff6b35);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover img {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    padding: 150px 0 100px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-weight: 600;
+    min-height: 2rem;
+}
+
+.hero .description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.main-content {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* ===== SECTION HEADERS ===== */
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.founder-intro {
+    background: rgba(255, 107, 53, 0.05);
+    padding: 3rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    text-align: left;
+    border-left: 5px solid #ff6b35;
+}
+
+.founder-intro h3 {
+    color: #ff6b35;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.badges {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.achievement-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffd700, #ffb347);
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+    padding: 80px 0;
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.experience-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background: white;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #ff6b35;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+}
+
+.experience-item h3 {
+    color: #ff6b35;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.company {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.duration {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.location {
+    color: #999;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: #ff6b35;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+/* ===== SERVICES SECTION ===== */
+.services {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+    border-color: #ff6b35;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff8c00, #ff6b35);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-link {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.service-link:hover {
+    color: #ff8c00;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education {
+    padding: 80px 0;
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.education-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff8c00, #ff6b35);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.education-item h3 {
+    color: #ff6b35;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.institution {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.education-details {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.education-item .duration {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.education-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 5px solid #ff6b35;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.author-role {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-date {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+/* ===== ACHIEVEMENTS SECTION ===== */
+.achievements {
+    padding: 80px 0;
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.achievement-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+}
+
+.achievement-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.achievement-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact > p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-item {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item h3 {
+    color: #ff6b35;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-item a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-item p {
+    margin-bottom: 0.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-left .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.footer-left p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.footer-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.footer-contact p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ff8c00, #ff6b35);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero .description {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-grid,
+    .testimonials-grid,
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item {
+        padding: 1.5rem;
+    }
+
+    .founder-intro {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-right {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .service-card,
+    .experience-item,
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .achievement-number {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ </style>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="C:\Users\Riziki Brenda\OneDrive\Pictures\c2f0cf7f-3498-4bab-b713-b426659c351b.jpg" alt="K'OD Marketing Agency Logo">
+                <span>K'OD Marketing Agency</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>K'OD Marketing Agency</h1>
+            <p class="subtitle">Digital Products • Fintech Solutions • Experiential Marketing</p>
+            <p class="description">Specializing in digital marketing, mobile applications, merchant acquisition, and strategic business development with proven expertise in fintech and data-driven solutions.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Get Started Today</a>
+                <a href="#experience" class="cta-button">View Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="main-content">
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About K'OD Marketing Agency</h2>
+                
+                <div class="founder-intro">
+                    <h3>Founded by Brian Odongo</h3>
+                    <p><strong>Experienced Digital Products Sales Manager</strong> with a demonstrated history of working in the Fintech, Web3, and Experiential Marketing industries.</p>
+                    
+                    <p>Brian brings extensive expertise in <strong>data analysis, mobile payments, cross-border payments, mobile lending, merchant onboarding, lead generation, market research, and project management</strong>.</p>
+                    
+                    <div class="badges">
+                        <span class="achievement-badge">📊 Big Data Concepts Certified</span>
+                        <span class="achievement-badge">🎓 BA Political Science & Gender Development</span>
+                        <span class="achievement-badge">🏆 Leadership Certificate</span>
+                    </div>
+                </div>
+                
+                <p>K'OD Marketing Agency leverages Brian's proven track record in fintech and digital marketing to help businesses scale through strategic merchant acquisition, mobile application development, and comprehensive marketing solutions.</p>
+                
+                <p>With experience managing multi-million shilling portfolios and onboarding major corporate clients, we provide the strategic insight and execution excellence that drives measurable results in today's digital economy.</p>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Professional Experience</h2>
+                <div class="experience-timeline">
+                    
+                    <!-- Current Position -->
+                    <div class="experience-item">
+                        <h3>Area Sales Manager (Loop) Merchant Acquisition</h3>
+                        <div class="company">NCBA Group</div>
+                        <div class="duration">Nov 2022 - Present (2+ years)</div>
+                        <div class="location">Kenya</div>
+                        <p>Leading merchant acquisition strategies for Loop mobile payment platform. Managing comprehensive sales operations, customer relationship management, and portfolio performance analysis.</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Mobile Applications</span>
+                            <span class="skill-tag">Loan Portfolio Analysis</span>
+                            <span class="skill-tag">CRM</span>
+                            <span class="skill-tag">Sales & Marketing</span>
+                            <span class="skill-tag">Business Analysis</span>
+                            <span class="skill-tag">Data Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Account Manager Position -->
+                    <div class="experience-item">
+                        <h3>Key Account Manager (EABL Retailer Acquisition)</h3>
+                        <div class="company">Crediation</div>
+                        <div class="duration">Jun 2021 - Aug 2022 (1 year 3 months)</div>
+                        <p>Managed key partnerships with major EABL distributors including <strong>Veew, Obradleys, Outlook, and Pekay</strong>. Contributed to disbursing over <strong>KES 500M in SME financing</strong> through strategic account management and customer acquisition.</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Partnership Acquisition</span>
+                            <span class="skill-tag">Key Account Management</span>
+                            <span class="skill-tag">Mobile Applications</span>
+                            <span class="skill-tag">New Business Development</span>
+                            <span class="skill-tag">Business Development</span>
+                            <span class="skill-tag">Data Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Team Leader Position -->
+                    <div class="experience-item">
+                        <h3>Team Leader (Vooma) Merchant Acquisition</h3>
+                        <div class="company">KCB Bank Group</div>
+                        <div class="duration">Jun 2020 - May 2021 (1 year)</div>
+                        <div class="location">Kenya</div>
+                        <p>Led merchant acquisition initiatives for Vooma mobile payment platform, driving business development and mobile application adoption across Kenya's retail sector.</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Mobile Applications</span>
+                            <span class="skill-tag">Business Development</span>
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Merchant Acquisition</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Manager Position -->
+                    <div class="experience-item">
+                        <h3>Project Manager</h3>
+                        <div class="company">Brisk Marketing</div>
+                        <div class="duration">Jul 2019 - Jun 2020 (1 year)</div>
+                        <p>Managed comprehensive marketing projects with focus on project coordination, sales strategy, and business development initiatives for diverse client portfolio.</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Sales</span>
+                            <span class="skill-tag">Project Coordination</span>
+                            <span class="skill-tag">Marketing</span>
+                            <span class="skill-tag">Business Development</span>
+                            <span class="skill-tag">Data Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Earlier Positions -->
+                    <div class="experience-item">
+                        <h3>Project Sales Team Lead</h3>
+                        <div class="company">Trueblaq Limited</div>
+                        <div class="duration">Aug 2016 - Jan 2018 (1 year 6 months)</div>
+                        <p>Led sales team initiatives and project coordination for marketing campaigns and business development activities.</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Sales Management</span>
+                            <span class="skill-tag">Project Coordination</span>
+                        </div>
+                    </div>
+
+                    <!-- Internship -->
+                    <div class="experience-item">
+                        <h3>Credit Intern</h3>
+                        <div class="company">Women Enterprise Fund (WEF)</div>
+                        <div class="duration">Jun 2016 - Sep 2016 (4 months)</div>
+                        <p>Gained foundational experience in credit analysis, loan processing, and microfinance operations supporting women entrepreneurs.</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Credit Analysis</span>
+                            <span class="skill-tag">Loan Processing</span>
+                            <span class="skill-tag">Microfinance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Core Services</h2>
+                <div class="services-grid">
+                    
+                    <!-- Service 1: Mobile Application Marketing -->
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Mobile Application Marketing</h3>
+                        <p>Specialized merchant acquisition and user onboarding strategies for mobile payment platforms, fintech apps, and digital services. Proven experience with Loop, Vooma, and Credistock platforms managing thousands of merchant accounts.</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
+                    </div>
+                    
+                    <!-- Service 2: Fintech Solutions -->
+                    <div class="service-card">
+                        <div class="service-icon">💰</div>
+                        <h3>Fintech Solutions & Strategy</h3>
+                        <p>End-to-end fintech marketing including mobile lending, cross-border payments, portfolio analysis, and risk management. Direct experience managing <strong>KES 500M+ in SME financing</strong> operations and major corporate partnerships.</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
+                    </div>
+                    
+                    <!-- Service 3: Data Analysis & BI -->
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Data Analysis & Business Intelligence</h3>
+                        <p>Advanced data analysis, market research, and business intelligence services. <strong>Big Data certified</strong> with expertise in CRM systems, portfolio performance analysis, and strategic business reporting for decision-making.</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2>Education & Certifications</h2>
+                <div class="education-grid">
+                    
+                    <!-- University Education -->
+                    <div class="education-item">
+                        <div class="education-icon">🎓</div>
+                        <h3>Bachelor of Arts</h3>
+                        <div class="institution">Kenyatta University</div>
+                        <div class="education-details">Political Science and Gender Development</div>
+                        <div class="duration">May 2014 - Dec 2018</div>
+                        <p>Comprehensive education in political science, development studies, and gender analysis providing strong analytical and research foundation for strategic business development.</p>
+                    </div>
+
+                    <!-- Leadership Certificate -->
+                    <div class="education-item">
+                        <div class="education-icon">🏆</div>
+                        <h3>Certificate in Leadership</h3>
+                        <div class="institution">Kenyatta University</div>
+                        <div class="duration">2018</div>
+                        <p>Specialized training in leadership principles, team management, and organizational development enhancing project management and team coordination capabilities.</p>
+                    </div>
+
+                    <!-- Big Data Certificate -->
+                    <div class="education-item">
+                        <div class="education-icon">📊</div>
+                        <h3>Big Data Concepts Certificate</h3>
+                        <div class="institution">Professional Certification</div>
+                        <div class="duration">2023</div>
+                        <p>Advanced training in big data analysis, data science methodologies, and business intelligence applications for strategic decision-making in fintech and marketing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Professional Testimonials</h2>
+                <div class="testimonials-grid">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I had the pleasure of working with Brian Odongo during his tenure as a Key Account Manager at Crediation Ltd. He played a key role in onboarding major EABL distributors—Veew, Obradleys, Outlook, and Pekay—which directly contributed to our growth and market penetration in Kenya. Brian brought a sharp commercial mindset and strong execution discipline to every task. His ability to manage partners, balance credit risk, and support sustainable lending made him an invaluable part of our success in disbursing over KES 500M in SME financing. He's reliable, strategic, and has a solid grasp of what it takes to deliver results in a fast-paced environment."</p>
+                        <div class="testimonial-author">Timothy Wanyoike</div>
+                        <div class="author-role">B2B Business Sales Development Manager @ Bolt Business 🌍</div>
+                        <div class="testimonial-date">Former Manager at Crediation</div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I have known Brian as a passionate, responsible and reliable individual who goes out of his way to make things happen. He is multifaceted with digital banking abilities and an acumen in sales. Any organization that hires him will greatly benefit from his skills and passion. His expertise in fintech and digital solutions makes him a valuable asset to any team."</p>
+                        <div class="testimonial-author">Barnabas Mungo SFC</div>
+                        <div class="author-role">Product Development Specialist | Digital Banking Professional | SAFe Agile | Key Accounts Manager</div>
+                        <div class="testimonial-date">Former Colleague</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Achievements Section -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <h2>Key Achievements</h2>
+                <div class="achievements-grid">
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-number">500M+</div>
+                        <h3>KES in SME Financing</h3>
+                        <p>Successfully contributed to disbursing over KES 500 million in SME financing through strategic partnership management and risk assessment at Crediation.</p>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="achievement-number">4</div>
+                        <h3>Major EABL Distributors</h3>
+                        <p>Successfully onboarded key EABL distributors: Veew, Obradleys, Outlook, and Pekay, significantly expanding market penetration and client portfolio.</p>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="achievement-number">3</div>
+                        <h3>Major Banks Experience</h3>
+                        <p>Extensive hands-on experience with Kenya's top financial institutions: NCBA Group, KCB Bank Group, and leading fintech companies in mobile payments.</p>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="achievement-number">5+</div>
+                        <h3>Years in Fintech</h3>
+                        <p>Over 5 years of specialized experience in fintech, mobile payments, digital financial services, and merchant acquisition across Kenya's financial sector.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Ready to Scale Your Digital Business?</h2>
+                <p>Let's discuss how our proven fintech and digital marketing expertise can accelerate your business growth and market penetration.</p>
+                
+                <!-- Contact Information Grid -->
+                <div class="contact-info">
+                    
+                    <!-- Email Contact -->
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:odongobri@gmail.com">odongobri@gmail.com</a></p>
+                        <p>Professional consultation and project inquiries</p>
+                    </div>
+                    
+                    <!-- Phone Contact -->
+                    <div class="contact-item">
+                        <h3>📱 Direct Contact</h3>
+                        <p><a href="tel:+254713990175">+254 713 990 175</a></p>
+                        <p>Available for immediate consultation</p>
+                    </div>
+                    
+                    <!-- LinkedIn Profile -->
+                    <div class="contact-item">
+                        <h3>🌐 Professional Network</h3>
+                        <p><a href="https://www.linkedin.com/in/brian-odongo-766893103" target="_blank">LinkedIn Profile</a></p>
+                        <p>Connect for networking and partnerships</p>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>Nairobi, Kenya</p>
+                        <p>Serving clients across East Africa</p>
+                    </div>
+                </div>
+                
+                <!-- Call to Action Buttons -->
+                <div class="cta-buttons">
+                    <a href="mailto:odongobri@gmail.com" class="cta-button">Schedule Consultation</a>
+                    <a href="tel:+254713990175" class="cta-button">Call Now</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="C:\Users\Riziki Brenda\OneDrive\Pictures\c2f0cf7f-3498-4bab-b713-b426659c351b.jpg" alt="K'OD Marketing Agency Logo">
+                        <span>K'OD Marketing Agency</span>
+                    </div>
+                    <p>Transforming businesses through fintech expertise and strategic marketing excellence.</p>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <p>📧 odongobri@gmail.com</p>
+                        <p>📱 +254 713 990 175</p>
+                        <p>📍 Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 K'OD Marketing Agency. All rights reserved.</p>
+                <p>Founded by Brian Odongo - Digital Marketing & Fintech Solutions Expert</p>
+            </div>
+        </div>
+    </footer>
+    <script src="C:\Users\Riziki Brenda\OneDrive\Desktop\index.html\odo.js"></script>
+</body>
+</html>
